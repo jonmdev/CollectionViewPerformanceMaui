@@ -1,7 +1,6 @@
 ﻿using CollectionViewPerformanceMaui.Services;
 using CollectionViewPerformanceMaui.ViewModels;
 using CollectionViewPerformanceMaui.Views;
-using Microsoft.Maui.Handlers;
 
 
 #if ANDROID
@@ -37,12 +36,10 @@ namespace CollectionViewPerformanceMaui
 				.RegisterViewModels()
 				.RegisterViews();
 
-            //OVERRIDE LABEL CONFIGURATION
-#if ANDROID
-            LabelHandler.PlatformViewFactory = (handler) => {
-                return new CMauiTextView(handler.Context); //Create custom MauiTextView for CLabelHandler
-            };
-#endif
+			//===================================
+			//OVERRIDE LABEL CONFIGURATION
+			//===================================
+			OverrideLabelCreation.overrideLabelCreation();
 
 
 
