@@ -14,15 +14,29 @@
 
     <Shell.TitleView>
 
-        <Grid>
+        <!--https://stackoverflow.com/questions/47357595/how-to-position-3-buttons-in-stacklayout-equal-width-->
 
-            <Button
-                Text="Change template"
+        <Grid 
+     ColumnDefinitions="50*, 50*"
+     ColumnSpacing="8" 
+     HorizontalOptions="FillAndExpand">
+            <Button 
+                Text="Change Template"
                 Command="{Binding OpenTemplateSwitcherCommand}"
-                HorizontalOptions="Center"
-                Margin="5" />
+                Margin="5" 
+                Grid.Column="0" 
+                HorizontalOptions="FillAndExpand"/>
+
+            <Button 
+                Text="Reset Counters"
+                Command="{Binding ResetCountersCommand}"
+                Margin="5" 
+                Grid.Column="1" 
+                HorizontalOptions="FillAndExpand"/>
 
         </Grid>
+
+
 
     </Shell.TitleView>
 

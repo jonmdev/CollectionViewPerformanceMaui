@@ -72,7 +72,13 @@ namespace CollectionViewPerformanceMaui.ViewModels
             this.IsBusy = false;
 		}
 
-		[RelayCommand]
+        [RelayCommand]
+        private async Task ResetCounters() {
+            UpdateCounter.resetCounters();
+            return;
+        }
+
+        [RelayCommand]
 		private async Task OpenTemplateSwitcher()
 		{
 			if (Application.Current?.MainPage is null)

@@ -16,7 +16,7 @@ namespace CollectionViewPerformanceMaui {
         }
 
         public override void SetLayerPaint(global::Android.Graphics.Paint paint) {
-            UpdateCounter.addPaintUpdate();
+            UpdateCounter.addDrawUpdate();
             base.SetLayerPaint(paint);
         }
         class LayoutListener : Java.Lang.Object, IOnLayoutChangeListener {
