@@ -15,15 +15,15 @@ namespace CollectionViewPerformanceMaui {
             this.AddOnLayoutChangeListener(new LayoutListener());
         }
 
-        public override void SetLayerPaint(global::Android.Graphics.Paint paint) {
-            UpdateCounter.addDrawUpdate();
-            base.SetLayerPaint(paint);
-        }
         class LayoutListener : Java.Lang.Object, IOnLayoutChangeListener {
             public void OnLayoutChange(Android.Views.View? v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
                 UpdateCounter.addLayoutUpdate();
             }
         };
+        protected override void OnLayout(bool changed, int left, int top, int right, int bottom) {
+            //UpdateCounter.addLayoutUpdate();
+            base.OnLayout(changed, left, top, right, bottom);
+        }
 
         protected override void OnMeasure(int widthMeasureSpec, int heightMeasureSpec) {
             UpdateCounter.addMeasureUpdate(this.GetHashCode().ToString());

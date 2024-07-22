@@ -15,7 +15,11 @@ namespace CollectionViewPerformanceMaui {
         }
         public override void Draw(CGRect rect) {
             base.Draw(rect);
+            UpdateCounter.addDrawUpdate();
+        }
+        public override void LayoutSubviews() {
             UpdateCounter.addLayoutUpdate();
+            base.LayoutSubviews();
         }
 
     }
