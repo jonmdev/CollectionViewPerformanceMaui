@@ -65,12 +65,55 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Photos\cat1.jpg" />
+	  <None Remove="Resources\Photos\cat10.jpg" />
+	  <None Remove="Resources\Photos\cat11.jpg" />
+	  <None Remove="Resources\Photos\cat12.jpg" />
+	  <None Remove="Resources\Photos\cat13.jpg" />
+	  <None Remove="Resources\Photos\cat14.jpg" />
+	  <None Remove="Resources\Photos\cat2.jpg" />
+	  <None Remove="Resources\Photos\cat3.jpg" />
+	  <None Remove="Resources\Photos\cat4.jpg" />
+	  <None Remove="Resources\Photos\cat5.jpg" />
+	  <None Remove="Resources\Photos\cat6.jpg" />
+	  <None Remove="Resources\Photos\cat7.jpg" />
+	  <None Remove="Resources\Photos\cat8.jpg" />
+	  <None Remove="Resources\Photos\cat9.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="Resources\Photos\cat1.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat10.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat11.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat12.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat13.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat14.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat2.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat3.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat4.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat5.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat6.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat7.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat8.jpg" />
+	  <EmbeddedResource Include="Resources\Photos\cat9.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.20-nightly.10367" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.20-nightly.10367" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Controls\CardWithPhoto.xaml.cs">
+	    <DependentUpon>CardWithPhoto.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Controls\CardWithPhoto.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Controls\ComplexCard.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

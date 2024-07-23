@@ -10,15 +10,15 @@ using UIKit;
 using CoreGraphics;
 
 namespace CollectionViewPerformanceMaui {
-    internal class CUILabel : MauiLabel {
-        public CUILabel() {
+    internal class CustomIOSLabel : MauiLabel {//derives from UILabel
+        public CustomIOSLabel() { 
         }
         public override void Draw(CGRect rect) {
+            UpdateCounter.addLabelDrawUpdate();
             base.Draw(rect);
-            UpdateCounter.addDrawUpdate();
         }
         public override void LayoutSubviews() {
-            UpdateCounter.addLayoutUpdate();
+            UpdateCounter.addLabelLayoutUpdate();
             base.LayoutSubviews();
         }
 

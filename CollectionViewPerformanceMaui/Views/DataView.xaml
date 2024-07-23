@@ -364,6 +364,15 @@
 
         </DataTemplate>
 
+        <DataTemplate
+            x:Key="CardWithPhoto"
+            x:DataType="models:Data">
+
+            <controls:CardWithPhoto
+                Source="{Binding}" />
+
+        </DataTemplate>
+
         <viewModels:MyDataTemplateSelector
             x:Key="MyDataTemplateSelector"
             Card="{StaticResource Card}"
@@ -374,7 +383,8 @@
             CardWithTapGesture="{StaticResource CardWithTapGesture}"
             CardWithGrid="{StaticResource CardWithGrid}"
             CardWithTheLot="{StaticResource CardWithTheLot}"
-            CardWithComplexContent="{StaticResource CardWithComplexContent}" />
+            CardWithComplexContent="{StaticResource CardWithComplexContent}" 
+            CardWithPhoto="{StaticResource CardWithPhoto}" />
 
     </ContentPage.Resources>
 

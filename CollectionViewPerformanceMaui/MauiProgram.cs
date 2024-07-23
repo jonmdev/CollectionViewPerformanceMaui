@@ -39,7 +39,8 @@ namespace CollectionViewPerformanceMaui
 			//===================================
 			//OVERRIDE LABEL CONFIGURATION
 			//===================================
-			OverrideLabelCreation.overrideLabelCreation();
+			OverrideClassCreation.overrideLabelCreation();
+			OverrideClassCreation.overrideImageCreation();
 
 
 

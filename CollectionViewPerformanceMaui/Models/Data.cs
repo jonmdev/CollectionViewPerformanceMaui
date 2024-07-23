@@ -22,6 +22,25 @@ namespace CollectionViewPerformanceMaui.Models
 
         public List<string> SocialMedia { get; set; } = new();
 
+        public ImageSource PhotoImageSource { get; set; } = null;
+
+        List<string> imageStrings = new() {
+                "CollectionViewPerformanceMaui.Resources.Photos.cat1.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat2.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat3.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat4.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat5.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat6.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat7.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat8.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat9.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat10.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat11.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat12.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat13.jpg",
+                "CollectionViewPerformanceMaui.Resources.Photos.cat14.jpg",
+            };
+
         public Data()
 		{
 			var random = new Random();
@@ -47,8 +66,9 @@ namespace CollectionViewPerformanceMaui.Models
 				FontAwesome.Facebook,
 				FontAwesome.Tiktok,
 			};
+            this.PhotoImageSource = ImageSource.FromResource(imageStrings[new Random().Next(0, imageStrings.Count)]);
 
-			// random.Next(0, 2) == 1; // 50/50 chance
-		}
-	}
+            // random.Next(0, 2) == 1; // 50/50 chance
+        }
+    }
 }

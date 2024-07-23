@@ -25,6 +25,7 @@ namespace CollectionViewPerformanceMaui.ViewModels
 		public DataTemplate? CardWithTheLot { get; set; }
 
         public DataTemplate? CardWithComplexContent { get; set; }
+        public DataTemplate? CardWithPhoto { get; set; }
 
         protected override DataTemplate? OnSelectTemplate(object item, BindableObject container)
 		{
@@ -39,6 +40,7 @@ namespace CollectionViewPerformanceMaui.ViewModels
 				Template.CardWithGrid => this.CardWithGrid,
 				Template.CardWithTheLot => this.CardWithTheLot,
 				Template.CardWithComplexContent => this.CardWithComplexContent,
+				Template.CardWithPhoto => this.CardWithPhoto,
                 _ => null
 			};
 		}
