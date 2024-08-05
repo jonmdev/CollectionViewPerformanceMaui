@@ -19,7 +19,7 @@ namespace CollectionViewPerformanceMaui
                 MainPage = new AppShell();
             }
             //============================================
-            //2) SIMPLE PROJECT USING LAYOUTS
+            //2) SIMPLE PROJECT USING BASIC LAYOUTS
             //============================================
             else {
                 ContentPage mainPage = new();
